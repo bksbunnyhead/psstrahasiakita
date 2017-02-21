@@ -11,14 +11,14 @@ public class Sapi {
     private short healt;
     private short happy;
     private short spiritOfLive;
-
+/*
     /**
      * agar sapi bisa berbicara
-     */
+
     public String sayMoo() {
         System.out.println("Mooooooooo\n");
     }
-
+*/
     /**
      * @id : mengembalikan id
      */
@@ -49,19 +49,19 @@ public class Sapi {
     public String getStatus() {
         return status;
     }
-
+/*
     public setId(String id) {
         this.id = id;
     }
 
     public setAsset(String asset) { this.asset = asset;}
 
-    public setStatus(Stirng status) { this.status = status; }
+    public setStatus(String status) { this.status = status; }
 
     public setHealt(short healt) { this.healt = healt; }
 
     public setHappy(short happy) {this.happy = happy; }
 
     public setSpiritOfLive(short spiritOfLive) { this.spiritOfLive = spiritOfLive; }
-
+*/
 }

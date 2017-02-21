@@ -8,6 +8,20 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context="com.kelompok16.supercow.InventorySelectionActivity">
-
+    tools:context="com.kelompok16.supercow.InventorySelectionActivity"
+    android:background="#f5f1db">
+    <fragment
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:name="com.kelompok16.supercow.CowFragment"
+        tools:layout="@layout/fragment_cow"
+        android:id="@+id/inventory_upper_layout"
+        android:layout_centerHorizontal="true"/>
+    <fragment 
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:name="com.kelompok16.supercow.InventoryFragment"
+        tools:layout="@layout/fragment_inventory"
+        android:layout_below="@id/inventory_upper_layout">
+    </fragment>
 </RelativeLayout>

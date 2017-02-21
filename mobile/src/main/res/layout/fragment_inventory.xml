@@ -2,12 +2,32 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.kelompok16.supercow.InventoryActivity">
+    tools:context="com.kelompok16.supercow.InventoryFragment"
+    android:background="#202020">
 
     <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
-
+        android:layout_height="match_parent">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="inventory"
+            android:textSize="24dp"
+            android:id="@+id/inventoryText"
+            android:layout_marginBottom="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginLeft="8dp"
+            android:gravity="center_horizontal"/>
+        <GridView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/inventoryText"
+            android:id="@+id/inventoryGrid"
+            android:numColumns="auto_fit"
+            android:columnWidth="150dp"
+            android:horizontalSpacing="10dp"
+            android:verticalSpacing="20dp">
+        </GridView>
+    </RelativeLayout>
 </FrameLayout>
