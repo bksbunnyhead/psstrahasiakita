@@ -5,24 +5,23 @@
     android:id="@+id/activity_home"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:paddingBottom="@dimen/activity_vertical_margin"
-    android:paddingLeft="@dimen/activity_horizontal_margin"
-    android:paddingRight="@dimen/activity_horizontal_margin"
-    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="0dp"
+    android:paddingLeft="0dp"
+    android:paddingRight="0dp"
+    android:paddingTop="0dp"
     tools:context="com.kelompok16.supercow.HomeActivity"
-    android:background="#f5f1db">
+    android:background="@color/backgroundColorLight">
     <!--TODO : Semua string masih STUB. nanti pindahin semuanya ke strings.xml-->
     <!--TODO : Ganti font familinya jadi Elsie-->
     <!--TODO : Buat style/theme yang jadi definisi skema warnanya-->
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical"
-        android:id="@+id/homeBaseLayout">
+
+    <!-- ......................TOP LAYOUT............................. -->
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/top_home_layout">
+            android:id="@+id/top_home_layout"
+            android:padding="10dp"
+            android:layout_centerHorizontal="true">
             <ImageView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -36,28 +35,32 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:id="@+id/center_social_layout"
-                android:layout_toRightOf="@id/icon_settings"
-                android:paddingLeft="70dp"
-                android:paddingRight="70dp"
-                android:layout_centerVertical="true">
-                <ImageView
+                android:paddingLeft="40dp"
+                android:paddingRight="40dp"
+                android:layout_centerInParent="true"
+                android:background="@drawable/garnish_social">
+                <RelativeLayout
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:src="@drawable/customarrow"
-                    android:id="@+id/arrows_top"
-                    android:adjustViewBounds="true"
-                    android:maxWidth="40dp"
-                    android:scaleType="center"
-                    android:rotation="180"/>
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="social"
-                    android:textColor="#000000"
-                    android:textSize="24dp"
-                    android:id="@+id/social_text"
-                    android:layout_toRightOf="@id/arrows_top"
-                    />
+                    android:layout_centerHorizontal="true">
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/customarrow"
+                        android:id="@+id/arrows_top"
+                        android:adjustViewBounds="true"
+                        android:maxWidth="30dp"
+                        android:scaleType="center"
+                        android:rotation="180"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="social"
+                        android:textColor="#000000"
+                        android:textSize="24sp"
+                        android:id="@+id/social_text"
+                        android:layout_toRightOf="@id/arrows_top" />
+                </RelativeLayout>
             </RelativeLayout>
 
             <ImageView
@@ -65,17 +68,19 @@
                 android:layout_height="wrap_content"
                 android:src="@drawable/shop"
                 android:adjustViewBounds="true"
-                android:layout_toRightOf="@id/center_social_layout"
                 android:maxWidth="40dp"
                 android:maxHeight="40dp"
                 android:layout_alignParentRight="true"
                 />
         </RelativeLayout>
+
+    <!-- .....................................SAPI................................ -->
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:id="@+id/cow_name"
-            android:layout_marginTop="30dp">
+            android:layout_marginTop="16dp"
+            android:layout_below="@id/top_home_layout">
             <ImageView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -87,8 +92,8 @@
                 android:layout_height="wrap_content"
                 android:text="Fulan"
                 android:id="@+id/cow_name_text"
-                android:textColor="#8f6363"
-                android:textSize="32dp"
+                android:textColor="@color/Pink"
+                android:textSize="32sp"
                 android:layout_centerHorizontal="true"/>
             <ImageView
                 android:layout_width="wrap_content"
@@ -102,43 +107,61 @@
             android:layout_height="wrap_content"
             android:name="com.kelompok16.supercow.CowFragment"
             tools:layout="@layout/fragment_cow"
-            android:layout_gravity="center"
-            android:layout_marginTop="30dp"
-            android:layout_marginBottom="30dp">
+            android:layout_centerInParent="true"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="20dp"
+            android:layout_below="@id/cow_name"
+            android:id="@+id/cow_fragment_layout">
         </fragment>
         <!--TODO : Ganti font familynya jadi Alegriya Sans-->
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Overall: She needs a little bit care"
-            android:textSize="22dp"
-            android:textColor="#8f6363"
+            android:textSize="22sp"
+            android:textColor="@color/Pink"
             android:textAlignment="center"
-            android:textStyle="italic"/>
+            android:textStyle="italic"
+            android:layout_below="@id/cow_fragment_layout"
+            android:id="@+id/cow_overall_status_text"/>
         <!--TODO:Mungkin bisa kali ya nge-set paddingnya di kode program nanti-->
+
+    <!-- ..........................BOTTOM LAYOUT.......................... -->
         <RelativeLayout
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:id="@+id/inventory_home_drawer"
-            android:layout_gravity="center"
-            android:layout_marginTop="70dp"
-            android:background="#e1e3d2">
+            android:layout_below="@id/cow_overall_status_text"
+            android:layout_alignParentBottom="true"
+            android:layout_marginTop="32dp">
             <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/garnish_inventory"
+                android:scaleType="fitXY"/>
+            <RelativeLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:src="@drawable/customarrow"
-                android:id="@+id/arrows_top_inventory"
-                android:adjustViewBounds="true"
-                android:maxWidth="50dp"
-                android:scaleType="center"/>
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:id="@+id/inventory_drawer_text"
-                android:text="inventory"
-                android:textColor="#000000"
-                android:layout_toRightOf="@id/arrows_top_inventory"
-                android:textSize="40dp"/>
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:paddingBottom="10dp">
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/customarrow"
+                    android:id="@+id/arrows_top_inventory"
+                    android:adjustViewBounds="true"
+                    android:maxWidth="50dp"
+                    android:scaleType="center"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/inventory_drawer_text"
+                    android:text="inventory"
+                    android:textColor="#000000"
+                    android:layout_toRightOf="@id/arrows_top_inventory"
+                    android:textSize="40sp"/>
+            </RelativeLayout>
+
         </RelativeLayout>
-    </LinearLayout>
 </RelativeLayout>

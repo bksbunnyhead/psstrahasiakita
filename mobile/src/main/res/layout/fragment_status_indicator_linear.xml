@@ -22,7 +22,7 @@
             android:layout_height="wrap_content"
             android:id="@+id/hungerStatus"
             android:layout_below="@id/hunger"
-            android:src="@drawable/hungerBar"
+            android:src="@drawable/hunger_bar"
             android:layout_marginBottom="16dp"/>
         <TextView
             android:layout_width="match_parent"
@@ -39,7 +39,7 @@
             android:layout_height="wrap_content"
             android:id="@+id/happinessStatus"
             android:layout_below="@id/happiness"
-            android:src="@drawable/happinessBar"
+            android:src="@drawable/happiness_bar"
             android:layout_marginBottom="16dp"/>
         <TextView
             android:layout_width="match_parent"
@@ -56,7 +56,7 @@
             android:layout_height="wrap_content"
             android:id="@+id/energyStatus"
             android:layout_below="@id/Energy"
-            android:src="@drawable/energyBar"
+            android:src="@drawable/energy_bar"
             android:layout_marginBottom="16dp"/>
         <TextView
             android:layout_width="match_parent"
@@ -73,6 +73,6 @@
             android:layout_height="wrap_content"
             android:id="@+id/SOLstatus"
             android:layout_below="@id/SpiritOfLife"
-            android:src="@drawable/solbar"/>
+            android:src="@drawable/sol-bar"/>
     </RelativeLayout>
 </FrameLayout>

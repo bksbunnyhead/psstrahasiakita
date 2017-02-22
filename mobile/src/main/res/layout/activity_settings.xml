@@ -8,13 +8,17 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context="com.kelompok16.supercow.SettingsActivity">
+    tools:context="com.kelompok16.supercow.SettingsActivity"
+    android:background="@color/backgroundColorLight">
     <TextView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
+        android:layout_height="wrap_content"
+        android:text="settings"
+        android:textColor="#000000"
+        android:textSize="30sp"
+        android:gravity="center"/>
     <ListView
         android:layout_width="match_parent"
         android:layout_height="match_parent">
-
     </ListView>
 </RelativeLayout>

@@ -3,11 +3,26 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="com.kelompok16.supercow.ShopItemFragment">
-
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        android:layout_height="wrap_content">
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@drawable/garnish_shop"
+            android:id="@+id/shop_garnish"
+            android:scaleType="fitXY"/>
+        <GridView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="96dp"
+            android:id="@+id/inventoryGrid"
+            android:numColumns="auto_fit"
+            android:columnWidth="320dp"
+            android:horizontalSpacing="10dp"
+            android:verticalSpacing="20dp">
+        </GridView>
+    </RelativeLayout>
+
 
 </FrameLayout>
