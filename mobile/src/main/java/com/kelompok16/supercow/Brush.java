@@ -25,7 +25,7 @@ public class Brush extends AppCompatActivity implements SensorEventListener{
     public void onSensorChanged(SensorEvent event) {
         mSensorListener.setOnShakeListener(new ShakeEventListener.OnShakeListener() {
             public void onShake() {
-                Toast.makeText(Home.this, "Shake!", Toast.LENGTH_SHORT).show();
+                Toast.makeText(Brush.this, "Shake!", Toast.LENGTH_SHORT).show();
             }
         });
 

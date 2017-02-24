@@ -65,10 +65,10 @@ public class Home extends AppCompatActivity implements SensorEventListener {
     }
 
     public void sleepButton() {
-        if(sapi.getEnergy() < 100)
+        if(sapi.getEnergy() < 100){
             goCowSleep();
             Toast.makeText(getApplicationContext(),"cow is died",Toast.LENGTH_SHORT).show();
-
+        }
         else
             Toast.makeText(getApplicationContext(),"cow is very ZEALED",Toast.LENGTH_SHORT).show();
     }

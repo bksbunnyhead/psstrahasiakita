@@ -17,7 +17,7 @@ public class Sapi {
     /**
      * agar sapi bisa berbicara
      */
-    public String sayMoo() {
+    public void sayMoo() {
         System.out.println("Mooooooooo\n");
     }
 
