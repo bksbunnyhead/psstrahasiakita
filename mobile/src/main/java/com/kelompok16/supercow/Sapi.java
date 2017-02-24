@@ -8,9 +8,11 @@ public class Sapi {
     private String id;
     private String asset;
     private String status;
+    private boolean wake;
     private short healt;
     private short happy;
     private short spiritOfLive;
+    private short energy;
 
     /**
      * agar sapi bisa berbicara
@@ -34,6 +36,22 @@ public class Sapi {
         return asset;
     }
 
+    public boolean isWake() {
+        return wake;
+    }
+
+    public void setWake(boolean wake) {
+        this.wake = wake;
+    }
+
+    public void setEnergy(short energy) {
+        this.energy = energy;
+    }
+
+    public short getEnergy() {
+        return energy;
+    }
+
     public short getHealt() {
         return healt;
     }
@@ -50,18 +68,18 @@ public class Sapi {
         return status;
     }
 
-    public setId(String id) {
+    public void setId(String id) {
         this.id = id;
     }
 
-    public setAsset(String asset) { this.asset = asset;}
+    public void setAsset(String asset) { this.asset = asset;}
 
-    public setStatus(Stirng status) { this.status = status; }
+    public void setStatus(String status) { this.status = status; }
 
-    public setHealt(short healt) { this.healt = healt; }
+    public void setHealt(short healt) { this.healt = healt; }
 
-    public setHappy(short happy) {this.happy = happy; }
+    public void setHappy(short happy) {this.happy = happy; }
 
-    public setSpiritOfLive(short spiritOfLive) { this.spiritOfLive = spiritOfLive; }
+    public void setSpiritOfLive(short spiritOfLive) { this.spiritOfLive = spiritOfLive; }
 
 }
