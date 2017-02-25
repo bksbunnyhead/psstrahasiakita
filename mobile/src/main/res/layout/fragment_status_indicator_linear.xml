@@ -73,6 +73,6 @@
             android:layout_height="wrap_content"
             android:id="@+id/SOLstatus"
             android:layout_below="@id/SpiritOfLife"
-            android:src="@drawable/sol-bar"/>
+            android:src="@drawable/sol_bar"/>
     </RelativeLayout>
 </FrameLayout>

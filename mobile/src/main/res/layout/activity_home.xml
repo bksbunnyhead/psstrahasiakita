@@ -82,12 +82,6 @@
             android:id="@+id/cow_name"
             android:layout_marginTop="16dp"
             android:layout_below="@id/top_home_layout">
-            <ImageView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:id="@+id/cow_name_garnish_left"
-                android:src="@drawable/garnish_diamond"
-                android:layout_toLeftOf="@id/cow_name_text"/>
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -96,6 +90,12 @@
                 android:textColor="@color/Pink"
                 android:textSize="32sp"
                 android:layout_centerHorizontal="true"/>
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/cow_name_garnish_left"
+                android:src="@drawable/garnish_diamond"
+                android:layout_toLeftOf="@id/cow_name_text"/>
             <ImageView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"

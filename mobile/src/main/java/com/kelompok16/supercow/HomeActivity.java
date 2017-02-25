@@ -1,6 +1,7 @@
 package com.kelompok16.supercow;
 
 import android.media.Image;
+import android.net.Uri;
 import android.os.Handler;
 import android.os.Looper;
 import android.support.v7.app.AppCompatActivity;
@@ -15,10 +16,12 @@ import android.util.Log;
 import android.content.Context;
 import android.widget.Toast;
 
+
 /**
  * Activity beranda.
  */
-public class HomeActivity extends AppCompatActivity {
+public class HomeActivity extends AppCompatActivity
+        implements CowFragment.OnFragmentInteractionListener {
 
     private ImageView mSettingIcon;
     private ImageView mShopIcon;
@@ -26,6 +29,12 @@ public class HomeActivity extends AppCompatActivity {
     private RelativeLayout mInventoryDrawer;
     private TextView mCowName;
     private final String TAG = "HomeActivity";
+
+    @Override
+    public void onFragmentInteraction(Uri uri) {
+
+    }
+
     private class ActivityGestureDetector extends GestureDetector.SimpleOnGestureListener{
         private final int SWIPE_THRESHOLD = 100;
         private final int SWIPE_VELOCITY_THRESHOLD = 100;
@@ -86,24 +95,25 @@ public class HomeActivity extends AppCompatActivity {
             return true;
         }
     }
-    ActivityGestureDetector mGestureDec = new ActivityGestureDetector();
-
-    View.OnTouchListener mActivitySwipeListener = new View.OnTouchListener() {
-        Handler mHandler = new Handler(Looper.getMainLooper());//gatau mesti ngeoverride handlemessage atau ga
-        Context ctx = getApplicationContext();
-        private GestureDetector swipeGestureDetected = new GestureDetector(ctx,
-                new ActivityGestureDetector(), mHandler );
-        @Override
-        public boolean onTouch(View v, MotionEvent event) {
-            return swipeGestureDetected.onTouchEvent(event);
-        }
-
-    };
+    ActivityGestureDetector mGestureDec;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
+
+        View.OnTouchListener mActivitySwipeListener = new View.OnTouchListener() {
+            Handler mHandler = new Handler(Looper.getMainLooper());//gatau mesti ngeoverride handlemessage atau ga
+            Context ctx = getApplicationContext();
+            private GestureDetector swipeGestureDetected = new GestureDetector(ctx,
+                    new ActivityGestureDetector(), mHandler );
+            @Override
+            public boolean onTouch(View v, MotionEvent event) {
+                return swipeGestureDetected.onTouchEvent(event);
+            }
+
+        };
+        mGestureDec = new ActivityGestureDetector();
 
         mSettingIcon = (ImageView) findViewById(R.id.icon_settings);
         mShopIcon = (ImageView) findViewById(R.id.icon_shop);

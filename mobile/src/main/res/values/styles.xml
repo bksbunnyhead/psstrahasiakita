@@ -2,9 +2,7 @@
 
     <!-- Base application theme. -->
     <style name="SuperCowTheme">
-        <item name="backgroundColorLight">#f5f1db</item>
-        <item name="backgroundColorDark">#202020</item>
-        <item name="textColorPink">#8f6363</item>
+
     </style>
 
 </resources>
