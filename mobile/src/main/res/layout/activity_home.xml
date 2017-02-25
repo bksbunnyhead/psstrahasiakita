@@ -71,6 +71,7 @@
                 android:maxWidth="40dp"
                 android:maxHeight="40dp"
                 android:layout_alignParentRight="true"
+                android:id="@+id/icon_shop"
                 />
         </RelativeLayout>
 
